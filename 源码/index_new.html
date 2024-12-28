@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yj餐馆</title>
+    <link rel="icon" href="images/title.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/container_new.css">
+    <link rel="stylesheet" href="css/footer_new.css">
+    <link rel="stylesheet" href="css/index_new.css">
+    <script src="audioPlayer.js"></script>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <div class="nav">
+        <div class="city">
+            <p id="current-city">城市:</p>
+            <!-- 点击后跳转到城市选择页面，不再打开新标签 -->
+            <a href="city_new.html" class="iconfont">&#xe650;</a>
+        </div>
+        <div class="title">殷洁饿了吗</div>
+        <div class="search"><i class="iconfont">&#xe62f</i></div>
+    </div>
+
+    <div class="clearHeight"></div>
+
+    <!-- 轮播图 -->
+    <div class="banner">
+        <div class="carousel-images">
+            <img src="images/banner1.png" alt="图片1">
+            <img src="images/banner2.jpg" alt="图片2">
+            <img src="images/banner3.jpg" alt="图片3">
+            <img src="images/banner4.jpg" alt="图片4">
+            <img src="images/banner5.jpg" alt="图片5">
+        </div>
+        <ul class="btn">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script src="js/carousel.js"></script>  <!-- 引入轮播图的 JavaScript -->
+
+    <!-- 消息部分 -->
+    <div class="message">
+        <i class="iconfont">&#xe61f;</i>
+        <span id="message-content">殷洁做饭，色相俱全</span>
+    </div>
+
+    <!-- 菜单部分 -->
+    <div class="menu">
+        <div class="menu-active">
+            <a href="#">
+                <img src="images/menu1.png" alt="菜单1">
+                <p>立即订餐</p>
+            </a>
+        </div>
+        <div>
+            <a href="waimai_new.html">
+                <img src="images/menu2.png" alt="菜单1">
+                <p>叫外卖</p>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <img src="images/menu3.png" alt="菜单1">
+                <p>订位置</p>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <img src="images/menu4.png" alt="菜单1">
+                <p>健康主食</p>
+            </a>
+        </div>
+     </div>
+
+     <!-- 餐厅标题开始-->
+      <div class="restaurant-title">推荐餐厅</div>
+
+      <!-- 主体开始 -->
+       <div class="container">
+            <div class="sj-item">
+                <div class="sj-top">
+                    <img src="images/shangjia1.png" alt="餐厅1">
+                    <div class="sj-info">
+                        <p>茶馆</p>
+                        <p>人均：￥188</p>
+                        <p>
+                            <i class="iconfont">&#xe636;</i> 
+                            <i class="iconfont">&#xe636;</i>
+                            <i class="iconfont">&#xe636;</i>
+                            <i class="iconfont">&#xe636;</i>
+                            <i class="iconfont">&#xe636;</i>
+                        </p>
+                        <span class="order">订</span>
+                    </div>
+                </div>
+                <div class="sj-bottom">湖南星沙维也纳餐厅</div>
+            </div>
+       </div>
+
+       <div class="sj-item">
+        <div class="sj-top">
+            <img src="images/shangjia2.png" alt="餐厅2">
+            <div class="sj-info">
+                <p>烤肉</p>
+                <p>人均：￥88</p>
+                <p>
+                    <i class="iconfont">&#xe636;</i> 
+                    <i class="iconfont">&#xe636;</i>
+                    <i class="iconfont">&#xe636;</i>
+                    <i class="iconfont">&#xe636;</i>
+                    <i class="iconfont grey">&#xe636;</i>
+                </p>
+                <span class="order">订</span>
+            </div>
+        </div>
+        <div class="sj-bottom">湖南星沙烤肉店</div>
+    </div>
+
+    <div class="sj-item">
+        <div class="sj-top">
+            <img src="images/shangjia3.png" alt="餐厅2">
+            <div class="sj-info">
+                <p>饺子</p>
+                <p>人均：￥8</p>
+                <p>
+                    <i class="iconfont">&#xe636;</i> 
+                    <i class="iconfont">&#xe636;</i>
+                    <i class="iconfont">&#xe636;</i>
+                    <i class="iconfont grey">&#xe636;</i>
+                    <i class="iconfont grey">&#xe636;</i>
+                </p>
+                <span class="order">订</span>
+            </div>
+        </div>
+        <div class="sj-bottom">湖南星沙路边饺子店</div>
+    </div>
+</div>
+
+<div class="clearHeight"></div>
+
+<!-- 页脚 -->
+<div class="footer">
+    <div class="footer-active">
+        <a href="index_new.html">
+            <i class="iconfont">&#xe600;</i>
+            <p>首页</p>
+        </a>
+    </div>
+    <div>
+        <a href="login.html">
+            <i class="iconfont">&#xe68a;</i>
+            <p>账户</p>
+        </a>
+    </div>
+
+    <div>
+        <a href="user_new.html">
+            <i class="iconfont">&#xe638;</i>
+            <p>设置</p>
+        </a>
+    </div>
+
+    <div>
+        <a href="yh.html">
+            <i class="iconfont">&#xe607;</i>
+            <p>更多</p>
+        </a>
+    </div>
+</div>
+
+<script>
+    // 页面加载时，读取并显示选中的城市
+    document.addEventListener('DOMContentLoaded', function() {
+        const selectedCity = localStorage.getItem('selectedCity');
+        if (selectedCity) {
+            document.getElementById('current-city').textContent = '城市: ' + selectedCity;
+        }
+    });
+</script>
+
+</body>
+</html>

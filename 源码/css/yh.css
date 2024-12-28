@@ -1,0 +1,40 @@
+/* 设置一个容器，用于承载樱花 */
+.sakura-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;  /* 确保不会影响其他页面元素的点击 */
+    z-index: 9999; /* 确保樱花效果在最前面 */
+}
+
+/* 定义每个樱花花瓣的样式 */
+.sakura {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+/* 樱花飘落的动画 */
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg); /* 初始位置 */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg); /* 从顶部到页面底部 */
+        opacity: 0;
+    }
+}
+
+/* 添加一些随机的飘落效果 */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+}

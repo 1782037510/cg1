@@ -1,0 +1,180 @@
+/* 导航栏样式 */
+.nav {        
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: aquamarine;
+    line-height: 50px;
+    color: white;
+    align-items: center;
+}
+
+.city {
+    width: 65px;
+    height: 50px;
+    background-color: gold;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    flex-grow: 1;
+    height: 50px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.search {
+    width: 40px;
+    height: 50px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.city > a {
+    color: #fff;
+    font-size: 12px;
+}
+
+.search > i {
+    font-size: 20px;
+}
+
+/* 轮播图样式 */
+.banner {
+    position: relative;
+    margin-top: 0; /* 将上面的间距去掉，使轮播图紧挨导航栏 */
+    overflow: hidden; /* 隐藏超出的图片部分 */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease; /* 平滑过渡效果 */
+    width: 500%; /* 设置父容器的宽度为 100% * 图片数量 */
+}
+
+.carousel-images img {
+    width: 100vw; /* 每张图片宽度占满视口宽度 */
+    height: auto; /* 保证高度按比例缩放 */
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 5%;
+}
+
+.btn > li {
+    height: 100%;
+    width: 18%;
+    background-color: rgb(42, 86, 189);
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.btn > li.active {
+    opacity: 1;
+}
+
+/* 按钮悬停效果 */
+.btn > li:hover {
+    opacity: 1;
+}
+/* 消息样式 */
+.message {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    color: rgba(210, 23, 61, 0.653);
+    font-size: 14px;
+    text-align: left;
+    line-height: 30px;
+    position: relative;
+    overflow: hidden;  /* 隐藏超出部分 */
+}
+
+.message > i {
+    color: rgb(42, 86, 189);
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.message > .message-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    animation: scrollMessage 9s infinite;
+}
+
+.message > .message-text > span {
+    flex-shrink: 0;
+    opacity: 0;
+    animation: showMessage 9s infinite;
+}
+
+/* 控制消息动画 */
+@keyframes scrollMessage {
+    0% { transform: translateY(0); }
+    33% { transform: translateY(-33.33%); }
+    66% { transform: translateY(-66.66%); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes showMessage {
+    0%, 33%, 66%, 100% { opacity: 0; }
+    8%, 28%, 58% { opacity: 1; }
+}
+
+.menu{
+    display: flex;
+    width:100%;
+    height:100px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.menu>div{
+    flex-grow:1;
+}
+.menu img{
+    width:45px;
+    margin: 5px 0 10px;
+}
+.menu a{
+    color: #a6a6a6;
+    font-size: 14px;
+}
+.menu-active>a{
+    color: #017e5c;
+}
+
+.restaurant-title{
+    width:100%;
+    height:25px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    line-height: 25px;
+    text-align: center;
+    font-size:22px;
+    color: #333;
+}
+
+
+
+
+

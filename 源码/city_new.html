@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择城市</title>
+    <link rel="icon" href="images/title.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <script src="audioPlayer.js"></script>
+    <style>
+        /* 基本样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
+        #city-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* 自适应网格 */
+            gap: 10px;
+            padding: 20px;
+            list-style: none;
+            margin: 0;
+        }
+
+        #city-list li {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        #city-list li:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.05);
+        }
+
+        #city-list a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* 响应式设计：调整在小屏设备上的显示 */
+        @media (max-width: 600px) {
+            #city-list {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* 更小的卡片宽度 */
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>选择城市</h1>
+    <ul id="city-list">
+        <li><a href="#" data-city="北京">北京</a></li>
+        <li><a href="#" data-city="上海">上海</a></li>
+        <li><a href="#" data-city="广州">广州</a></li>
+        <li><a href="#" data-city="深圳">深圳</a></li>
+        <li><a href="#" data-city="杭州">杭州</a></li>
+        <li><a href="#" data-city="成都">成都</a></li>
+        <li><a href="#" data-city="武汉">武汉</a></li>
+        <li><a href="#" data-city="重庆">重庆</a></li>
+        <li><a href="#" data-city="南京">南京</a></li>
+        <li><a href="#" data-city="天津">天津</a></li>
+        <li><a href="#" data-city="苏州">苏州</a></li>
+        <li><a href="#" data-city="西安">西安</a></li>
+        <li><a href="#" data-city="厦门">厦门</a></li>
+        <li><a href="#" data-city="青岛">青岛</a></li>
+        <li><a href="#" data-city="大连">大连</a></li>
+        <li><a href="#" data-city="沈阳">沈阳</a></li>
+        <li><a href="#" data-city="长沙">长沙</a></li>
+        <li><a href="#" data-city="福州">福州</a></li>
+        <li><a href="#" data-city="合肥">合肥</a></li>
+        <li><a href="#" data-city="郑州">郑州</a></li>
+        <li><a href="#" data-city="郑州">哈尔滨</a></li>
+        <li><a href="#" data-city="济南">济南</a></li>
+        <li><a href="#" data-city="石家庄">石家庄</a></li>
+        <li><a href="#" data-city="太原">太原</a></li>
+        <li><a href="#" data-city="南昌">南昌</a></li>
+        <li><a href="#" data-city="长春">长春</a></li>
+        <li><a href="#" data-city="沧州">沧州</a></li>
+        <li><a href="#" data-city="昆明">昆明</a></li>
+        <li><a href="#" data-city="贵阳">贵阳</a></li>
+        <li><a href="#" data-city="海口">海口</a></li>
+        <li><a href="#" data-city="南宁">南宁</a></li>
+        <li><a href="#" data-city="银川">银川</a></li>
+        <li><a href="#" data-city="乌鲁木齐">乌鲁木齐</a></li>
+    </ul>
+
+    <script>
+        // 为每个城市链接添加点击事件
+        document.querySelectorAll('#city-list a').forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // 阻止默认跳转
+
+                // 获取所选城市
+                const selectedCity = event.target.getAttribute('data-city');
+
+                // 将选中的城市存储到 localStorage
+                localStorage.setItem('selectedCity', selectedCity);
+
+                // 返回上一页面，更新城市信息
+                window.history.back();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            /*父元素设置宽度为整个页面*/
+            width: 100%;
+            /*父元素转换为表格*/
+            display: table;
+        }
+        .left{
+            /*子元素转换为列|单元格*/
+            display: table-cell;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .right{
+            /*子元素转换为列|单元格*/
+            display: table-cell;
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+        .center{
+            /*子元素转换为列|单元格*/
+            display: table-cell;
+            height: 200px;
+            background-color: #0f97ff;
+        }
+    </style>
+</head>
+<body>
+<!--
+三栏布局：
+左右两块宽度固定,中间宽度自适应
+
+实现方法：
+1）弹性盒法
+    <style>
+        .box{
+            display: flex;//父元素开启弹性盒模型
+        }
+        .left{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .right{
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+        .center{
+            height: 200px;
+            background-color: #0f97ff;
+            flex-grow: 1;//子元素宽度自适应
+        }
+    </style>
+
+2）绝对定位法
+     <style>
+        .box{
+            position: relative;
+        }
+        .left{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .right{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+        .center{
+            height: 200px;
+            background-color: #0f97ff;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+    </style>
+
+3）浮动
+<div class="box">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="center">宽度自适应</div>
+</div>
+
+    <style>
+        .box{
+        }
+        .left{
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .right{
+            float: right;
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+        .center{
+            height: 200px;
+            background-color: #0f97ff;
+        }
+    </style>
+
+4）表格法
+    <style>
+        .box{
+            /*父元素设置宽度为整个页面*/
+            width: 100%;
+            /*父元素转换为表格*/
+            display: table;
+        }
+        .left{
+            /*子元素转换为列|单元格*/
+            display: table-cell;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .right{
+            /*子元素转换为列|单元格*/
+            display: table-cell;
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+        .center{
+            /*子元素转换为列|单元格*/
+            display: table-cell;
+            height: 200px;
+            background-color: #0f97ff;
+        }
+    </style>
+-->
+<div class="box">
+    <div class="left"></div>
+    <div class="center">宽度自适应</div>
+    <div class="right"></div>
+</div>
+</body>
+</html>
